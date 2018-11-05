@@ -1,0 +1,27 @@
+extends c
+
+##
+## Class
+# class
+snippet cls
+	class ${1:`vim_snippets#Filename('$1', 'name')`} {
+	private:
+		${0:/* data */}
+	public:
+		$1(${2});
+		virtual ~$1();
+	};
+
+##
+## Template
+# template
+snippet tp "template <typename ..> (template)"
+	template <typename ${1:T}>
+	${0}
+
+##
+## enum class
+# enum class
+snippet encl "enum class {...};"
+	enum class ${1} { ${2} };${0}
+
