@@ -1,4 +1,3 @@
-
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -156,6 +155,7 @@ endif
 " deoplete
 if has('nvim')
 	let g:deoplete#enable_at_startup = 1
+	packadd deoplete.nvim
 	autocmd VimEnter * call deoplete#custom#option('sources', {
 				\ '_': [''],
 				\ 'c': ['LanguageClient'],
@@ -165,6 +165,7 @@ endif
 
 " LanguageClient-neovim
 if has('nvim')
+	packadd LanguageClient-neovim
 	let g:LanguageClient_hasSnippetSupport = 0
 	let g:LanguageClient_serverCommands = {
 				\ 'c': ['clangd'],
