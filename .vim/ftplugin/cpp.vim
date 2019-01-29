@@ -1,5 +1,5 @@
 " インクルードパス補完
-setlocal path=.,/usr/include,/usr/include/c++/8.2.0,,
+setlocal path=.,/usr/include,/usr/include/c++/8.2.1,,
 
 " 名前空間の入力を簡単にする
 inoremap <buffer><expr>; <SID>expand_namespace()
