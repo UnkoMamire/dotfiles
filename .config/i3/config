@@ -185,3 +185,6 @@ exec --no-startup-id volumeicon
 
 # Start fcitx daemon
 exec --no-startup-id fcitx
+
+# Background
+exec --no-startup-id ~/.fehbg
