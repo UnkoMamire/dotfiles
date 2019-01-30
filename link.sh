@@ -14,3 +14,6 @@ for f in .??*; do
 	done
 done
 
+for f in $dotdir/afterlink_scripts/* ; do
+	$f
+done
