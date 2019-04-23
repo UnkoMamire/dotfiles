@@ -14,10 +14,9 @@ URxvt.saveLines:            3000
 URxvt.fading:               40
 
 !! Font list and Spacing
-URxvt.font:                 xft:Dejavu Sans Mono-9,\
-                            xft:IPAGothic
-URxvt.letterSpace:          -1
-!URxvt.lineSpace:            0
+URxvt.font:                 xft:Monaco-10, xft:VL Gothic-10, xft:Symbola-9
+URxvt.letterSpace:          0
+URxvt.lineSpace:            0
 
 !! Color Scheme and Opacity - gruvbox-dark https://github.com/morhetz/gruvbox
 URxvt.depth:                32
