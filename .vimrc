@@ -1,5 +1,5 @@
 " setting
-"文字コードをUFT-8に設定
+" 文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
@@ -26,7 +26,8 @@ syntax enable
 " 括弧入力時の対応する括弧を表示
 set showmatch
 " コマンドラインの補完
-set wildmode=list:longest
+set wildmenu
+set wildmode=full
 
 " Tab系
 " 不可視文字を可視化
@@ -136,11 +137,11 @@ nnoremap <expr>#  numberstar#key('#')
 nnoremap <expr>g* numberstar#key('g*')
 nnoremap <expr>#* numberstar#key('#*')
 
-" jplus
-nmap J <Plug>(jplus)
-vmap J <Plug>(jplus)
-nmap <Leader>J <Plug>(jplus-getchar)
-vmap <Leader>J <Plug>(jplus-getchar)
+" " jplus
+" nmap J <Plug>(jplus)
+" vmap J <Plug>(jplus)
+" nmap <Leader>J <Plug>(jplus-getchar)
+" vmap <Leader>J <Plug>(jplus-getchar)
 
 " neosnippet
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -160,6 +161,8 @@ if has('nvim')
 				\ '_': [''],
 				\ 'c': ['LanguageClient'],
 				\ 'cpp': ['LanguageClient'],
+				\ 'java': ['LanguageClient'],
+				\ 'python': ['LanguageClient'],
 				\})
 endif
 
@@ -170,6 +173,8 @@ if has('nvim')
 	let g:LanguageClient_serverCommands = {
 				\ 'c': ['clangd'],
 				\ 'cpp': ['clangd'],
+				\ 'java': ['jdtls'],
+				\ 'python' : ['pyls']
 				\ }
 
 	function s:confforLC()
@@ -194,7 +199,8 @@ if has('nvim')
 		setlocal formatexpr=LanguageClient#textDocument_rangeFormatting_sync()
 		" LanguageClient-vimが生きてる間は常時signcolumを有効に
 		setlocal signcolumn=yes
+		highlight SignColumn guibg=black ctermbg=black
 	endfunction
-	autocmd Filetype c,cpp :call s:confforLC()
+	autocmd Filetype c,cpp,java,python :call s:confforLC()
 
 endif
