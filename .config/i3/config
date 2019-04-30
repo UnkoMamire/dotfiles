@@ -72,7 +72,8 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+minus split v
 
 # split in vertical orientation
-bindsym $mod+Shift+minus split h
+bindcode $mod+Shift+51 split h
+# ($mod+|)
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -189,14 +190,16 @@ client.urgent           #C20000 #C20000 #FFFFFF #FFFFFF
 # bar toggle, hide or show
 bindsym $mod+m bar mode toggle
 
-# Start browser
-bindsym $mod+b exec vivaldi-stable
-
 # Start editor
-bindsym $mod+t exec "urxvtc -e nvim"
+bindcode $mod+35 exec "urxvtc -e nvim"
+# ($mod+])
 
 # Start file manager
-bindsym $mod+q exec "urxvtc -e ranger"
+bindcode $mod+48 exec "urxvtc -e ranger"
+# ($mod+')
+
+# Start browser
+bindsym $mod+slash exec "vivaldi-stable"
 
 # Start compton
 exec --no-startup-id compton -cbm 0.75
