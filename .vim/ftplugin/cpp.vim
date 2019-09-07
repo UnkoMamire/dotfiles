@@ -1,5 +1,6 @@
 " インクルードパス補完
-setlocal path=.,/usr/include,/usr/include/c++/8.2.1,,
+let cpp_var_list=split(system('ls /usr/include/c++'),"\n")
+let &path='.,/usr/include,/usr/include/c++/'.cpp_var_list[-1].','
 
 " 名前空間の入力を簡単にする
 inoremap <buffer><expr>; <SID>expand_namespace()
