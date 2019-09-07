@@ -169,7 +169,6 @@ endif
 " LanguageClient-neovim
 if has('nvim')
 	packadd LanguageClient-neovim
-	let g:LanguageClient_hasSnippetSupport = 0
 	let g:LanguageClient_serverCommands = {
 				\ 'c': ['clangd'],
 				\ 'cpp': ['clangd'],
