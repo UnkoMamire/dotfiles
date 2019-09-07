@@ -6,10 +6,9 @@ extends c
 snippet cls
 	class ${1:`vim_snippets#Filename('$1', 'name')`} {
 	private:
-		${0:/* data */}
+		${2:#:/* data */}
 	public:
-		$1(${2});
-		virtual ~$1();
+		${0:#:/* function */}
 	};
 
 ##
