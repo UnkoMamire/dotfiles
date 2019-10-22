@@ -8,6 +8,7 @@ function main() {
 	['Lock']='i3-lock'
 	['Logout']='i3-msg exit'
 	['Suspend']='systemctl suspend'
+	['Hiberante']='systemctl hibernate'
 	['Reboot']='systemctl reboot'
 	['Poweroff']='systemctl poweroff'
 
