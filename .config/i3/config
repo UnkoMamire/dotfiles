@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec urxvtc -e tmux
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -193,11 +193,11 @@ client.background #1b1e26
 bindsym $mod+m bar mode toggle
 
 # Start editor
-bindcode $mod+35 exec "urxvtc -e nvim"
+bindcode $mod+35 exec "alacritty -e nvim"
 # ($mod+])
 
 # Start file manager
-bindcode $mod+48 exec "urxvtc -e ranger"
+bindcode $mod+48 exec "alacritty -e ranger"
 # ($mod+')
 
 # Start browser
@@ -205,12 +205,6 @@ bindsym $mod+slash exec "vivaldi-stable"
 
 # Start compton
 exec --no-startup-id compton -cbm 0.75
-
-# Start urxvt daemon
-exec --no-startup-id urxvtd -o -f
-
-# Start volumeicon daemon
-exec --no-startup-id volumeicon
 
 # Start fcitx daemon
 exec --no-startup-id fcitx
