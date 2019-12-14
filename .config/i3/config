@@ -201,7 +201,7 @@ bindcode $mod+48 exec "alacritty -e ranger"
 # ($mod+')
 
 # Start browser
-bindsym $mod+slash exec "vivaldi-stable"
+bindsym $mod+slash exec "firefox"
 
 # Start compton
 exec --no-startup-id compton -cbm 0.75
