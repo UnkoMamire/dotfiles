@@ -17,8 +17,8 @@ filetype plugin indent on
 set nocompatible
 
 " 見た目系
-" 行番号を表示
-set number
+" 相対行番号を表示
+set relativenumber
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " シンタックス
