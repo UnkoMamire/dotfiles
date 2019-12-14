@@ -211,3 +211,6 @@ exec --no-startup-id fcitx
 
 # Background
 exec --no-startup-id ~/.fehbg
+
+#タイトルバーを消す
+for_window [class="^.*"] border pixel 2
